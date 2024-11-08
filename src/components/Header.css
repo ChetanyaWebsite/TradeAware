@@ -1,0 +1,55 @@
+/* Ensure that body has padding at the top to avoid overlap with fixed header */
+body {
+    margin: 0;
+    padding-top: 60px;  /* Adjust this based on header height */
+  }
+  
+  /* Header Styling */
+  .header {
+    position: fixed;      /* Make the header stick to the top */
+    top: 0;               /* Align it to the top of the viewport */
+    left: 0;              /* Align it to the left */
+    width: 100%;          /* Make the header full-width */
+    background-color: #333; /* Dark background color */
+    color: white;         /* White text */
+    padding: 15px 0;      /* Padding for top and bottom */
+    z-index: 1000;        /* Ensure it appears above other content */
+    box-shadow: 0 4px 2px -2px gray;  /* Optional: Add a shadow for better visibility */
+  }
+  
+  /* Styling the navigation links inside the header */
+  .nav {
+    list-style-type: none;
+    display: flex;            /* Use flexbox for horizontal layout */
+    justify-content: center;  /* Center the navigation links */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav li {
+    margin: 0 15px;          
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design: Stack navigation items on small screens */
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column; /* Stack links vertically on small screens */
+      align-items: center;
+    }
+  
+    .nav li {
+      margin: 10px 0;  /* Adjust spacing between items */
+    }
+  }
+  
